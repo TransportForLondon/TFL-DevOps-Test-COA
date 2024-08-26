@@ -46,7 +46,7 @@ jobs:
     needs: build-studentPortal
     runs-on: ubuntu-latest
     environment: 
-      name: prod
+      name: CharlesDev
       url: ${{ steps.deploy-api.outputs.webapp-url }}
     steps:
       - name: Download StudentPortal Artifact
