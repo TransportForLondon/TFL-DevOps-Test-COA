@@ -68,7 +68,7 @@ jobs:
     needs: [build-api, build-migration-script]
     runs-on: ubuntu-latest
     environment: 
-      name: prod
+      name: CharlesDev
       url: ${{ steps.deploy-api.outputs.webapp-url }}
     steps:
       - name: Download Api Artifact
