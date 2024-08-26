@@ -14,7 +14,7 @@ env:
   GITHUB_TOKEN: ${{ secrets.GHPAT_TOKEN || github.token }}
 
 jobs:
-  prod:
+  CharlesDev:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -34,5 +34,5 @@ jobs:
         template: ./Infrastructure/main.bicep
         deploymentMode: Incremental
         deploymentName: 'school-infra-deployment'
-        parameters: Infrastructure/main.parameters.json environmentName=prod sqlAdminPassword=${{ secrets.SQL_ADMIN_PASSWORD }} appUserPassword=${{ secrets.APP_USER_PASSWORD }}
+        parameters: Infrastructure/main.parameters.json environmentName=CharlesDev sqlAdminPassword=${{ secrets.SQL_ADMIN_PASSWORD }} appUserPassword=${{ secrets.APP_USER_PASSWORD }}
         failOnStdErr: false
